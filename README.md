@@ -1,5 +1,7 @@
 # Goals and Tasks Tracker (Java)
 
+[![CI](https://github.com/vkhobnya-source/my_goal_app_java/actions/workflows/ci.yml/badge.svg)](https://github.com/vkhobnya-source/my_goal_app_java/actions/workflows/ci.yml)
+
 Тот же трекер целей и задач, что и в `my_goal_app`, но бэкенд переписан на Java.
 Фронтенд (`frontend/index.html`, `frontend/style.css`) скопирован без изменений.
 
@@ -54,6 +56,12 @@ java -jar target\goals-tracker-1.0.0.jar
 
 Тесты поднимают приложение на случайном порту и используют отдельные файлы БД:
 `target/test-data/api.db` и `target/test-data/e2e.db`.
+
+## CI
+
+GitHub Actions (`.github/workflows/ci.yml`) на каждый push в `main` и pull request
+запускает две независимые задачи: API-тесты (TestNG) и E2E-тесты (Playwright,
+Chromium устанавливается в runner). Отчёты Surefire сохраняются артефактами.
 
 ## Настройка
 
