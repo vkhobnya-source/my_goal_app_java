@@ -1,0 +1,28 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: goals-tracker
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+app:
+  database:
+    path: ${DATABASE_PATH:goals.db}
+  jwt:
+    secret: ${SECRET_KEY:your-secret-key-change-this-in-production}
+    expiry-minutes: ${ACCESS_TOKEN_EXPIRE_MINUTES:30}
+  cors-origins: ${CORS_ORIGINS:http://localhost:8080}
+  ai:
+    api-key: ${OPENROUTER_API_KEY:}
+    model: ${OPENROUTER_MODEL:deepseek/deepseek-v4.1-flash}
+    api-url: ${OPENROUTER_API_URL:https://openrouter.ai/api/v1/chat/completions}
+    site-url: ${OPENROUTER_SITE_URL:http://localhost}
+    app-name: ${OPENROUTER_APP_NAME:My Goal App}
+
+logging:
+  level:
+    com.goaltracker: INFO

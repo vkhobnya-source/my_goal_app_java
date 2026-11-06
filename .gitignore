@@ -1,0 +1,25 @@
+# Сборка Maven
+target/
+out/
+build/
+
+# Базы данных SQLite
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Идеи и редакторы
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Логи и временные файлы
+*.log
+*.pid
+
+# ОС
+Thumbs.db
+.DS_Store

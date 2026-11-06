@@ -1,0 +1,14 @@
+* text=auto
+
+*.java text
+*.xml text
+*.yml text
+*.sql text
+*.md text
+*.html text
+*.css text
+
+*.sh text eol=lf
+mvnw text eol=lf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
